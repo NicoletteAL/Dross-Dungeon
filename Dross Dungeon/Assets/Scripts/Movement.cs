@@ -5,14 +5,14 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [Header("Movement")]
-    int[,] map = {{1,1,1,1,1}, 
-                    {1,0,1,0,1},
-                    {1,0,1,0,1},
-                    {1,0,1,0,1},
-                    {1,9,1,0,1},
-                    {1,0,1,0,1},
-                    {1,0,1,0,1},
-                    {1,1,1,1,1}};
+    int[,] map = {{1,1,1}, 
+                    {1,0,1},
+                    {1,0,1},
+                    {1,0,1},
+                    {1,9,1},
+                    {1,0,1},
+                    {1,0,1},
+                    {1,1,1}};
     int pr = 4, pc = 1; // player's position
     int mapDirection=1; // 1 = up, 2 = down, 3 = left, 4 = right
     
