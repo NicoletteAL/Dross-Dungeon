@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour
                     {1,0,1},
                     {1,0,1},
                     {1,0,1},
+                    {1,0,1},
+                    {1,0,1},
                     {1,9,1},
                     {1,0,1},
                     {1,0,1},
@@ -29,7 +31,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        renderView();
     }
 
     // Update is called once per frame

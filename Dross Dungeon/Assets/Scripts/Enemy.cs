@@ -2,23 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
-    public int hp;
-    public int low, high;
-    int gold = 0;
-
+    public int health = 10;
+    public GameObject go;
+    SpriteRenderer sp;
     // Start is called before the first frame update
     void Start()
     {
-
+        sp = go.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
-
-
 }
