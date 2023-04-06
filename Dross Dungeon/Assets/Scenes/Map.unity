@@ -133,6 +133,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5844786190496103274, guid: 2c25f174dd34a7b4bb716d43d0af454d, type: 3}
   m_PrefabInstance: {fileID: 5844786190686652523}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &205790007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1676159013667547273, guid: 17bf2c79c72018f4d966b729019f7bac, type: 3}
+  m_PrefabInstance: {fileID: 2588429905453444420}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &243206664 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5844786190578057827, guid: 2c25f174dd34a7b4bb716d43d0af454d, type: 3}
@@ -302,6 +313,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5844786191233997715, guid: 2c25f174dd34a7b4bb716d43d0af454d, type: 3}
   m_PrefabInstance: {fileID: 5844786190686652523}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &728021018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1982563331623492462, guid: 84e9a65efa99e594ab8a13803d45e8b0, type: 3}
+  m_PrefabInstance: {fileID: 1982563331886201376}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668b4cb67debd3143a4423ff26bf848a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &745647702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5844786191149114941, guid: 2c25f174dd34a7b4bb716d43d0af454d, type: 3}
@@ -506,6 +528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alert: {fileID: 471129984}
+  stats: {fileID: 205790007}
+  player: {fileID: 728021018}
 --- !u!4 &1411876938
 Transform:
   m_ObjectHideFlags: 0
@@ -704,6 +728,14 @@ PrefabInstance:
     - target: {fileID: 1982563331623492461, guid: 84e9a65efa99e594ab8a13803d45e8b0, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982563331623492462, guid: 84e9a65efa99e594ab8a13803d45e8b0, type: 3}
+      propertyPath: max
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982563331623492462, guid: 84e9a65efa99e594ab8a13803d45e8b0, type: 3}
+      propertyPath: gold
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1982563331623492463, guid: 84e9a65efa99e594ab8a13803d45e8b0, type: 3}
       propertyPath: m_RootOrder

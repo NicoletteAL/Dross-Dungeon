@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [Header("Movement")]
-    int[,] map = {{1,1,1}, // should be 16 rows long
+    static int[,] map = {{1,1,1}, // should be 16 rows long
                     {1,0,1},
                     {1,0,1},
                     {1,0,1},
@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
                     {1,0,1},
                     {1,0,1},
                     {1,1,1}};
-    int pr = 6, pc = 1; // player's position
+    static int pr = 6, pc = 1; // player's position
     //int mapDirection=1; // 1 = up, 2 = down, 3 = left, 4 = right
     
 
