@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int hp = 10;
-    public int max = 10;
-    public int low = 0, high = 4;
-    public int gold = 0;
+    //public static Player instance;
+    public static int hp = 20;
+    public static int max = 20;
+    public static int low = 0, high = 4;
+    public static int gold = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     }
 
     void Awake(){
+        //Player.instance = this;
         DontDestroyOnLoad(gameObject);
     }
 

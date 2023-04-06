@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668b4cb67debd3143a4423ff26bf848a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  hp: 20
+  max: 20
   low: 0
-  high: 0
+  high: 4
+  gold: 0

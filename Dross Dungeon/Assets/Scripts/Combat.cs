@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Combat : MonoBehaviour
 {
-    public Player p;
+    //public Player p;
     public Enemy e;
     int num;
     public TextMeshProUGUI alert;
@@ -16,7 +16,7 @@ public class Combat : MonoBehaviour
     void Start()
     {
         textE.text = "HP: " + e.hp + "/" + e.max;
-        textP.text = "HP: " + p.hp + "/" + p.max;
+        textP.text = "HP: " + Player.hp + "/" + Player.max;
     }
 
     // Update is called once per frame
@@ -24,27 +24,27 @@ public class Combat : MonoBehaviour
     {
         // check for input
         if (Input.GetKeyDown(KeyCode.A)) {
-            num = Random.Range(p.low, p.high);
+            num = Random.Range(Player.low, Player.high);
             e.hp-=num;
             if(e.hp <= 0) {
                 alert.text = "You won!";
-                p.gold+=e.gold;
+                Player.gold+=e.gold;
                 Win();
             }
             else{
                 alert.text = "You did " + num + " damage";
             }
             num = Random.Range(e.low, e.high);
-            p.hp-=num;
-            if (p.hp<=0) {
+            Player.hp-=num;
+            if (Player.hp<=0) {
                 alert.text = "You lost...";
                 Lose();
             }
             else {
-                alert.text = "Rat did " + num + " damage";
+                alert.text += "\nRat did " + num + " damage";
             }
             textE.text = "HP: " + e.hp + "/" + e.max;
-            textP.text = "HP: " + p.hp + "/" + p.max;
+            textP.text = "HP: " + Player.hp + "/" + Player.max;
         }
         if (Input.GetKeyDown(KeyCode.R)) {
             num = Random.Range(0, 10);
@@ -56,29 +56,29 @@ public class Combat : MonoBehaviour
                 default:
                     alert.text = "You failed to get away. The Rat has a free attack!";
                     num = Random.Range(e.low, e.high) + 1;
-                    p.hp-=num;
-                    if (p.hp<=0) {
+                    Player.hp-=num;
+                    if (Player.hp<=0) {
                         alert.text = "You lost...";
                         Lose();
                     }
                     else {
-                        alert.text = "Rat did " + num + " damage";
+                        alert.text += "\nRat did " + num + " damage";
                     }
                     break;
             }
             textE.text = "HP: " + e.hp + "/" + e.max;
-            textP.text = "HP: " + p.hp + "/" + p.max;
+            textP.text = "HP: " + Player.hp + "/" + Player.max;
         }
         if (Input.GetKeyDown(KeyCode.S)) {
             alert.text = "You gave up. The Rat left you go, taking some money if you have any";
-            p.gold-=Random.Range(5, 25);
-            if (p.gold < 0) {
+            Player.gold-=Random.Range(5, 25);
+            if (Player.gold < 0) {
                 //alert.text = "You have no money? The Rat beats you up!";
-                p.gold = 0;
+                Player.gold = 0;
             }
             Win();
             textE.text = "HP: " + e.hp + "/" + e.max;
-            textP.text = "HP: " + p.hp + "/" + p.max;
+            textP.text = "HP: " + Player.hp + "/" + Player.max;
         }
     }
 

@@ -11,7 +11,7 @@ public class Stats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stats.text = "HP: " + player.hp + "/" + player.max + "\nGold: " + player.gold;
+        stats.text = "HP: " + Player.hp + "/" + Player.max + "\nGold: " + Player.gold;
     }
 
     // Update is called once per frame

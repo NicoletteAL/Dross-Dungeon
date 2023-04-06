@@ -10,11 +10,11 @@ public class SpawnEnemy : MonoBehaviour
     int num;
     public TextMeshProUGUI alert;
     public TextMeshProUGUI stats;
-    public Player player;
+    //public Player player;
     // Start is called before the first frame update
     void Start()
     {
-        stats.text = "HP: " + player.hp + "/" + player.max + "\nGold: " + player.gold;
+        stats.text = "HP: " + Player.hp + "/" + Player.max + "\nGold: " + Player.gold;
     }
 
     // Update is called once per frame
@@ -37,25 +37,37 @@ public class SpawnEnemy : MonoBehaviour
             Application.Quit();
         } 
         if (Input.GetKeyDown(KeyCode.R)) {
-            num = Random.Range(1, 5);
-            if (player.hp+num >= player.max) {
-                player.hp = player.max;
-            }
-            else{
-                player.hp+=num;
-            }
-
-            stats.text = "HP: " + player.hp + "/" + player.max + "\nGold: " + player.gold; // update stats
-
-            // check for enemy
-            num = Random.Range(0, 10);
-            if (num < 3) {
-                alert.text = "Enemy!";
-                SceneManager.LoadScene("Battle");
-            }
-            else{
+            if (Player.hp == Player.max) {
+                alert.text = "You're already fully healed";
+                Pause();
                 alert.text = "";
             }
+            else {
+                num = Random.Range(1, 5);
+                alert.text = "Healed " + num + " HP";
+                if (Player.hp+num >= Player.max) {
+                    Player.hp = Player.max;
+                }
+                else{
+                    Player.hp+=num;
+                }
+                stats.text = "HP: " + Player.hp + "/" + Player.max + "\nGold: " + Player.gold; // update stats
+
+                Pause();
+
+                // check for enemy
+                num = Random.Range(0, 10);
+                if (num < 3) {
+                    alert.text = "Enemy!";
+                    SceneManager.LoadScene("Battle");
+                }
+                else{
+                    alert.text = "";
+                }
+            }
+            
+
+            
         }
     }
 
