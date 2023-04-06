@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [Header("Movement")]
-    int[,] map = {{1,1,1}, 
+    int[,] map = {{1,1,1}, // should be 16 rows long
                     {1,0,1},
                     {1,0,1},
                     {1,0,1},
@@ -14,9 +14,15 @@ public class Movement : MonoBehaviour
                     {1,9,1},
                     {1,0,1},
                     {1,0,1},
+                    {1,0,1},
+                    {1,0,1},
+                    {1,0,1},
+                    {1,0,1},
+                    {1,0,1},
+                    {1,0,1},
                     {1,1,1}};
-    int pr = 4, pc = 1; // player's position
-    int mapDirection=1; // 1 = up, 2 = down, 3 = left, 4 = right
+    int pr = 6, pc = 1; // player's position
+    //int mapDirection=1; // 1 = up, 2 = down, 3 = left, 4 = right
     
 
     [Header("Outside Objects")]
@@ -85,13 +91,10 @@ public class Movement : MonoBehaviour
     void renderView() {
         int n;
         for(n = 1; n < 5; ++n) {
-            
-            
-
             //Debug.Log("n = " + n);
             switch(n) { // go through the rows
                 case 1: // r - 1
-                Debug.Log("meow");
+                //Debug.Log("meow");
                     if (map[pr - n, 0] == 1) { // left wall
                         sp = go[0].GetComponent<SpriteRenderer>();
                         sp.sprite = spriteArray[1];
@@ -117,7 +120,7 @@ public class Movement : MonoBehaviour
                     
                     break;
                 case 2:
-                Debug.Log("meow2");
+                //Debug.Log("meow2");
                     if (map[pr - n, 0] == 1) { // left wall
                         sp = go[24].GetComponent<SpriteRenderer>();
                         sp.sprite = spriteArray[1];
@@ -143,7 +146,7 @@ public class Movement : MonoBehaviour
                     
                     break;
                 case 3:
-                Debug.Log("meow3");
+                //Debug.Log("meow3");
                     if (map[pr - n, 0] == 1) { // left wall
                         sp = go[40].GetComponent<SpriteRenderer>();
                         sp.sprite = spriteArray[1];
@@ -169,7 +172,7 @@ public class Movement : MonoBehaviour
                     
                     break;
                 case 4:
-                Debug.Log("meow4");
+                //Debug.Log("meow4");
                     if (map[pr - n, 1] == 1) {
                         sp = go[48].GetComponent<SpriteRenderer>();
                         sp.sprite = spriteArray[4];
@@ -182,7 +185,7 @@ public class Movement : MonoBehaviour
             }
 
             if (map[pr - n, 1] == 1 && n != 4)  {
-                Debug.Log("Stopping at " + n);
+                //Debug.Log("Stopping at " + n);
                 break;
             }
 
@@ -195,7 +198,7 @@ public class Movement : MonoBehaviour
         for(i = start; i < limit; ++i) {
             sp = go[i].GetComponent<SpriteRenderer>();
             sp.sprite = spriteArray[type];
-            Debug.Log(go[i].name);
+            //Debug.Log(go[i].name);
         }
         //Debug.Log(i);
     }

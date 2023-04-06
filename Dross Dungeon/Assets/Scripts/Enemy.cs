@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public int health = 10;
     public GameObject go;
     SpriteRenderer sp;
+    public int gold;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +18,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void Die() {
+        Destroy(gameObject);
     }
 }

@@ -20,5 +20,8 @@ public class Player : MonoBehaviour
 
     }
 
+    void Awake(){
+        DontDestroyOnLoad(gameObject);
+    }
 
 }
