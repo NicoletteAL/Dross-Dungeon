@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Enemy : MonoBehaviour
 {
@@ -10,10 +11,28 @@ public class Enemy : MonoBehaviour
     SpriteRenderer sp;
     public int gold = 15;
     public int low = 0, high = 3;
+
+    // potential sprites
+    public Sprite[] spArr;
+    public TextMeshProUGUI enemyName;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        int num = Random.Range(0,2);
         sp = go.GetComponent<SpriteRenderer>();
+        switch(num) {
+            case 0:
+                sp.sprite = spArr[0];
+                enemyName.text = "Rat, The Ferocious Nugget of the Sewers:";
+                break;
+            case 1:
+                sp.sprite = spArr[1];
+                enemyName.text = "Skull, A Literal Flying Skull:";
+                break;
+        }
+        Debug.Log(num);
     }
 
     // Update is called once per frame

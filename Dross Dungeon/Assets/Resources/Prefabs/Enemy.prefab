@@ -97,5 +97,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe69d39bb6d84641ac987ac930970da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  hp: 10
+  max: 10
   go: {fileID: 3921097718511412234}
+  gold: 15
+  low: 0
+  high: 3
+  spArr:
+  - {fileID: 21300000, guid: 028e92454b5866146b0698cfa4450798, type: 3}
+  - {fileID: 21300000, guid: fd003514c533ac642b6e5a8d7b8f34af, type: 3}
+  enemyName: {fileID: 0}
