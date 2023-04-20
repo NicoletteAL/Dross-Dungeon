@@ -11,8 +11,11 @@ public class OptionsMenu : MonoBehaviour
     public AudioMixer mixer;
     public TextMeshProUGUI mode;
 
-    public void ChangeVolume(float sliderValue) {
+    public void ChangeMasterVolume(float sliderValue) {
         mixer.SetFloat("Master", Mathf.Log10(sliderValue) * 20);
+    }
+    public void ChangeSoundVolume(float sliderValue) {
+        mixer.SetFloat("Sound", Mathf.Log10(sliderValue) * 20);
     }
 
     public void ChangeWindow() {
