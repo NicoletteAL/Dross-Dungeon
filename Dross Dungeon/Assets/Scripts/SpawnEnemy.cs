@@ -65,9 +65,9 @@ public class SpawnEnemy : MonoBehaviour
                     alert.text = "";
                 }
             }
-            
-
-            
+        }
+        if (Input.GetKeyDown(KeyCode.O)) {
+            SceneManager.LoadScene("Settings");
         }
     }
 
