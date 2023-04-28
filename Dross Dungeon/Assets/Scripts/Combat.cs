@@ -83,7 +83,7 @@ public class Combat : MonoBehaviour
     }
 
     void Win() {
-        SceneManager.LoadScene("Map");
+        SceneManager.LoadScene("Overworld");
     }
 
     void Lose() {

@@ -31,6 +31,6 @@ public class OptionsMenu : MonoBehaviour
     }
 
     public void Escape() {
-        SceneManager.LoadScene("Map");
+        SceneManager.LoadScene("Overworld");
     }
 }
