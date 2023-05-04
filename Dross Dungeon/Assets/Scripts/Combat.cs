@@ -51,9 +51,9 @@ public class Combat : MonoBehaviour
             num = Random.Range(e.low, e.high);
             Player.hp-=num;
             if (Player.hp<=0) {
-                Player.src.Play();
+                //Player.src.Play();
                 alert.text = "You lost...";
-                Invoke("Lose", 2);
+                Invoke("Lose", 1);
             }
             else {
                 alert.text += "\nThe enemy did " + num + " damage";
@@ -73,9 +73,9 @@ public class Combat : MonoBehaviour
                     num = Random.Range(e.low, e.high) + 1;
                     Player.hp-=num;
                     if (Player.hp<=0) {
-                        Player.src.Play();
+                       // Player.src.Play();
                         alert.text = "You lost...";
-                        Invoke("Lose", 2);
+                        Invoke("Lose", 1);
                     }
                     else {
                         alert.text += "\nThe enemy did " + num + " damage";
@@ -117,7 +117,7 @@ public class Combat : MonoBehaviour
 
         // reset the bosses
         GameManager.count = 0;
-        GameManager.src.Stop();
+        //GameManager.src.Stop();
         //GameManager g = GameManager.Instance;
         //g.GetComponent<AudioSource>().Stop();
 
