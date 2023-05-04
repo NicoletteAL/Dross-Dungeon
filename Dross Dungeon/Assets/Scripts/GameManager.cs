@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Enemy.isMini = false;
         src = GetComponent<AudioSource>();
         GetComponent<AudioSource>().clip = norm;
         CheckSprite();
