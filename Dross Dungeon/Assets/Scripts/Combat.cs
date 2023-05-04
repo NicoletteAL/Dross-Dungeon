@@ -107,6 +107,11 @@ public class Combat : MonoBehaviour
     void Lose() {
         // reset the player
         Player.max = Player.hp = 20;
+        Player.lasPos = new Vector3(14.5f, -8.5f, -8.0f);
+
+        // reset the bosses
+        GameManager.count = 0;
+        
         SceneManager.LoadScene("Lose");
     }
 

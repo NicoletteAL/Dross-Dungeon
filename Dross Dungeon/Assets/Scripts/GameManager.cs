@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
                 transform.position = new Vector3(-12.5f, 15.5f, -8.0f);
                 break;
             default:
+            count = 0;
                 SceneManager.LoadScene("Win");
                 break;
         }
