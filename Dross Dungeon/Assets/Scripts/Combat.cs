@@ -37,6 +37,7 @@ public class Combat : MonoBehaviour
             e.hp-=num;
             if(e.hp <= 0) {
                 alert.text = "You won!";
+                e.GetComponent<AudioSource>().Play();
                 Player.gold+=e.gold;
                 Player.low +=2;
                 Player.high += 2;
