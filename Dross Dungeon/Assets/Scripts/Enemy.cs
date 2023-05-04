@@ -14,25 +14,31 @@ public class Enemy : MonoBehaviour
 
     // potential sprites
     public Sprite[] spArr;
-    public TextMeshProUGUI enemyName;
+    public string enemyName;
+    public bool isMini = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        int num = Random.Range(0,2);
-        sp = go.GetComponent<SpriteRenderer>();
-        switch(num) {
+        if (isMini) {
+            enemyName = "Child Fatburg";
+        }
+        else {
+            int num = Random.Range(0,2);
+            sp = go.GetComponent<SpriteRenderer>();
+            switch(num) {
             case 0:
                 sp.sprite = spArr[0];
-                enemyName.text = "Rat, The Ferocious Nugget of the Sewers:";
+                enemyName = "Rat, The Ferocious Nugget of the Sewers:";
                 break;
             case 1:
                 sp.sprite = spArr[1];
-                enemyName.text = "Skull, A Literal Flying Skull:";
+                enemyName = "Skull, A Literal Flying Skull:";
                 break;
         }
-        Debug.Log(num);
+        }
+        
     }
 
     // Update is called once per frame

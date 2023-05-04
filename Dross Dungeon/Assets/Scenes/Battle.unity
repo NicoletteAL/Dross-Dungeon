@@ -1479,6 +1479,7 @@ MonoBehaviour:
   alert: {fileID: 994586695}
   textE: {fileID: 338833950}
   textP: {fileID: 156995504}
+  enemyName: {fileID: 557869326}
 --- !u!1001 &1801674788
 PrefabInstance:
   m_ObjectHideFlags: 0

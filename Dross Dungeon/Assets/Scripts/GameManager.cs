@@ -2,30 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    //public static Player instance;
-    public static int hp = 20;
-    public static int max = 20;
-    public static int low = 0, high = 4;
-    public static int gold = 0;
+    private static GameManager _instance;
 
-    private static Player _instance;
-
-    public static Player Instance { get { return _instance; } }
-
-    public Vector3 lasPos;
+    public static GameManager Instance { get { return _instance; } }
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = lasPos;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        lasPos = transform.position;
+        
     }
 
     void Awake(){
@@ -39,5 +31,4 @@ public class Player : MonoBehaviour
             
         }
     }
-
 }

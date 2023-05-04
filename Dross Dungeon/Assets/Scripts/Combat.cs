@@ -12,11 +12,13 @@ public class Combat : MonoBehaviour
     public TextMeshProUGUI alert;
     public TextMeshProUGUI textE;
     public TextMeshProUGUI textP;
+    public TextMeshProUGUI enemyName;
     // Start is called before the first frame update
     void Start()
     {
         textE.text = "HP: " + e.hp + "/" + e.max;
         textP.text = "HP: " + Player.hp + "/" + Player.max;
+        enemyName.text = e.enemyName;
     }
 
     // Update is called once per frame
@@ -90,16 +92,4 @@ public class Combat : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
-    /* void Pause() { Use if there is time left
-        StartCoroutine(PauseRoutine());
-        IEnumerator PauseRoutine(){
-            int n = 0;
-            if (n == 0){
-                yield return new WaitForSeconds(1);
-                n++;
-            }
-            
-        }
-        
-    }*/
 }
