@@ -54,8 +54,6 @@ public class SpawnEnemy : MonoBehaviour
                 }
                 stats.text = "HP: " + Player.hp + "/" + Player.max + "\nGold: " + Player.gold; // update stats
 
-                Pause();
-
                 // check for enemy
                 num = Random.Range(0, 10);
                 if (num < 3) {

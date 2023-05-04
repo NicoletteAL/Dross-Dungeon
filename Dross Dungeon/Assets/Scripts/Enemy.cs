@@ -47,11 +47,12 @@ public class Enemy : MonoBehaviour
                     sp.sprite = spArr[3];
                     break;
                 case 2:
-                enemyName = "Mother Dross, Mother of All Fatbergs";
+                    enemyName = "Mother Dross, Mother of All Fatbergs";
                     hp = 50;
                     max = 25;
                     low = 5;
                     high = 8;
+                    sp.sprite = spArr[4];
                     break;
             }
         }

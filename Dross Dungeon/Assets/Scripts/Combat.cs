@@ -17,7 +17,7 @@ public class Combat : MonoBehaviour
     {
         textE.text = "HP: " + e.hp + "/" + e.max;
         textP.text = "HP: " + Player.hp + "/" + Player.max;
-        enemyName.text = e.enemyName;
+        enemyName.text = "" + e.enemyName;
     }
 
     // Update is called once per frame
@@ -36,8 +36,8 @@ public class Combat : MonoBehaviour
                 alert.text = "You won!";
                 e.GetComponent<AudioSource>().Play();
                 Player.gold+=e.gold;
-                Player.low +=2;
-                Player.high += 2;
+                Player.low +=1;
+                Player.high += 1;
                 if (e.getMini()) {
                     Player.max += 10;
                     GameManager.count++;
