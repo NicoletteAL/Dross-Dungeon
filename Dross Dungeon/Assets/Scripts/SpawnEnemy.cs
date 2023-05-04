@@ -59,6 +59,7 @@ public class SpawnEnemy : MonoBehaviour
                 num = Random.Range(0, 10);
                 if (num < 3) {
                     alert.text = "Enemy!";
+                    Enemy.isMini = false;
                     SceneManager.LoadScene("Battle");
                 }
                 else{

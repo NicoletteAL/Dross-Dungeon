@@ -31,6 +31,8 @@ public class Combat : MonoBehaviour
             if(e.hp <= 0) {
                 alert.text = "You won!";
                 Player.gold+=e.gold;
+                Player.low +=2;
+                Player.high += 2;
                 Win();
             }
             else{

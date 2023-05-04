@@ -5,6 +5,10 @@ using TMPro;
 
 public class Enemy : MonoBehaviour
 {
+    private static Enemy _instance;
+
+    public static Enemy Instance { get { return _instance; } }
+
     public int hp = 10;
     public int max = 10;
     public GameObject go;
@@ -15,18 +19,42 @@ public class Enemy : MonoBehaviour
     // potential sprites
     public Sprite[] spArr;
     public string enemyName;
-    public bool isMini = false;
+    public static bool isMini = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        hp = max;
+        sp = go.GetComponent<SpriteRenderer>();
         if (isMini) {
-            enemyName = "Child Fatburg";
+            
+            switch(GameManager.count) {
+                case 0:
+                    enemyName = "Dredge, Child Fatburg";
+                    hp = 25;
+                    max = 25;
+                    low = 1;
+                    high = 4;
+                    break;
+                case 1:
+                    enemyName = "Filth, Child Fatburg";
+                    hp = 35;
+                    max = 35;
+                    low = 3;
+                    high = 5;
+                    break;
+                case 2:
+                enemyName = "Dross, Mother of All Fatburgs";
+                    hp = 50;
+                    max = 25;
+                    low = 5;
+                    high = 8;
+                    break;
+            }
         }
         else {
             int num = Random.Range(0,2);
-            sp = go.GetComponent<SpriteRenderer>();
             switch(num) {
             case 0:
                 sp.sprite = spArr[0];
@@ -47,7 +75,13 @@ public class Enemy : MonoBehaviour
         
     }
 
-    void Die() {
-        Destroy(gameObject);
+    void Awake(){
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        } else {
+            _instance = this;
+            
+        }
     }
 }
