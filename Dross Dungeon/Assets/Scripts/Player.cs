@@ -10,6 +10,10 @@ public class Player : MonoBehaviour
     public static int low = 0, high = 4;
     public static int gold = 0;
 
+    private static Player _instance;
+
+    public static Player Instance { get { return _instance; } }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +28,13 @@ public class Player : MonoBehaviour
 
     void Awake(){
         //Player.instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        } else {
+            _instance = this;
+        }
     }
 
 }
