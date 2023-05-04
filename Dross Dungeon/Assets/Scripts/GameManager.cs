@@ -33,11 +33,11 @@ public class GameManager : MonoBehaviour
         switch(count) {
             case 0:
                 sp.sprite = spArr[0];
-                boss.transform.position = new Vector3(14.5f, -8.5f, -8.0f);
+                transform.position = new Vector3(14.5f, -8.5f, -8.0f);
                 break;
             case 1:
                 sp.sprite = spArr[1];
-                boss.transform.position = new Vector3(-12.5f, 15.5f, -8.0f);
+                transform.position = new Vector3(-12.5f, 15.5f, -8.0f);
                 break;
             default:
                 SceneManager.LoadScene("Win");

@@ -102,7 +102,7 @@ public class Combat : MonoBehaviour
     }
 
     void Lose() {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Lose");
     }
 
 }
