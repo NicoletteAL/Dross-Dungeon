@@ -90,4 +90,12 @@ public class Enemy : MonoBehaviour
             
         }
     }
+
+    public void setIsMini(bool val) {
+        isMini = val;
+    }
+
+    public bool getMini() {
+        return isMini;
+    }
 }

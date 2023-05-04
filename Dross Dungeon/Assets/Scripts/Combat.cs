@@ -41,7 +41,7 @@ public class Combat : MonoBehaviour
                 Player.gold+=e.gold;
                 Player.low +=2;
                 Player.high += 2;
-                if (Enemy.isMini) {
+                if (e.getMini()) {
                     Player.max += 10;
                     GameManager.count++;
                 }
@@ -101,17 +101,23 @@ public class Combat : MonoBehaviour
     void Win() {
         // reset the enemy
         e.hp = e.max;
+        if (e.getMini()) {
+            e.setIsMini(false);
+        }
         SceneManager.LoadScene("Overworld");
     }
 
     void Lose() {
         // reset the player
         Player.max = Player.hp = 20;
-        Player.lasPos = new Vector3(14.5f, -8.5f, -8.0f);
+        Player.lasPos = new Vector3(0f, 0f, -4.0f);
+        Player.low = 0;
+        Player.high = 4;
+        Player.gold = 0;
 
         // reset the bosses
         GameManager.count = 0;
-        
+
         SceneManager.LoadScene("Lose");
     }
 

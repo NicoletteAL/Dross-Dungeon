@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public Sprite[] spArr;
     SpriteRenderer sp;
 
+    //Enemy e = Enemy.Instance;
+
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) { // player bumps into the boss
+    //e.setIsMini(false);
     Enemy.isMini = true;
     SceneManager.LoadScene("Battle");
     }

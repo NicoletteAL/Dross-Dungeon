@@ -10,7 +10,8 @@ public class SpawnEnemy : MonoBehaviour
     int num;
     public TextMeshProUGUI alert;
     public TextMeshProUGUI stats;
-    //public Player player;
+    //Enemy e = Enemy.Instance;
+ 
     // Start is called before the first frame update
     void Start()
     {
