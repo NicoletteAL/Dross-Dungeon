@@ -27,6 +27,14 @@ public class Combat : MonoBehaviour
         // check for input
         if (Input.GetKeyDown(KeyCode.A)) {
             num = Random.Range(Player.low, Player.high);
+
+            // play hit sound
+            //play the sound
+            GetComponent<AudioSource>().pitch = Random.Range(.7f,1.3f);
+
+            //play our sound
+            GetComponent<AudioSource>().Play();
+
             e.hp-=num;
             if(e.hp <= 0) {
                 alert.text = "You won!";

@@ -106,4 +106,6 @@ MonoBehaviour:
   spArr:
   - {fileID: 21300000, guid: 028e92454b5866146b0698cfa4450798, type: 3}
   - {fileID: 21300000, guid: fd003514c533ac642b6e5a8d7b8f34af, type: 3}
-  enemyName: {fileID: 0}
+  - {fileID: 21300000, guid: b9237f7c7b4a37147ac5a29ccb77fd70, type: 3}
+  - {fileID: 21300000, guid: 782cd05fd5d6ae342bc1cbfc7db8a02c, type: 3}
+  enemyName: 

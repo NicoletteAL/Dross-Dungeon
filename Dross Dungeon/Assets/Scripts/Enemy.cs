@@ -31,21 +31,21 @@ public class Enemy : MonoBehaviour
             
             switch(GameManager.count) {
                 case 0:
-                    enemyName = "Dredge, Child Fatburg";
+                    enemyName = "Dredge, Child Fatberg";
                     hp = 25;
                     max = 25;
                     low = 1;
                     high = 4;
                     break;
                 case 1:
-                    enemyName = "Filth, Child Fatburg";
+                    enemyName = "Filth, Child Fatberg";
                     hp = 35;
                     max = 35;
                     low = 3;
                     high = 5;
                     break;
                 case 2:
-                enemyName = "Dross, Mother of All Fatburgs";
+                enemyName = "Dross, Mother of All Fatbergs";
                     hp = 50;
                     max = 25;
                     low = 5;
