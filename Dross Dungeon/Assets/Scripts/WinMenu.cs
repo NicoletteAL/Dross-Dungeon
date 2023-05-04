@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class TitleMenu : MonoBehaviour
+public class WinMenu : MonoBehaviour
 {
-    public void StartGame() {
+    public void Menu() {
         //Debug.Log("Not Yet!");
-        SceneManager.LoadScene("Overworld");
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void Quit(){

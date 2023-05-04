@@ -33,6 +33,9 @@ public class Combat : MonoBehaviour
                 Player.gold+=e.gold;
                 Player.low +=2;
                 Player.high += 2;
+                if (Enemy.isMini) {
+                    GameManager.count++;
+                }
                 Win();
             }
             else{
@@ -45,7 +48,7 @@ public class Combat : MonoBehaviour
                 Lose();
             }
             else {
-                alert.text += "\nRat did " + num + " damage";
+                alert.text += "\nThe enemy did " + num + " damage";
             }
             textE.text = "HP: " + e.hp + "/" + e.max;
             textP.text = "HP: " + Player.hp + "/" + Player.max;
@@ -66,7 +69,7 @@ public class Combat : MonoBehaviour
                         Lose();
                     }
                     else {
-                        alert.text += "\nRat did " + num + " damage";
+                        alert.text += "\nThe enemy did " + num + " damage";
                     }
                     break;
             }
@@ -74,7 +77,7 @@ public class Combat : MonoBehaviour
             textP.text = "HP: " + Player.hp + "/" + Player.max;
         }
         if (Input.GetKeyDown(KeyCode.S)) {
-            alert.text = "You gave up. The Rat left you go, taking some money if you have any";
+            alert.text = "You gave up. The enemy left you go, taking some money if you have any";
             Player.gold-=Random.Range(5, 25);
             if (Player.gold < 0) {
                 //alert.text = "You have no money? The Rat beats you up!";
