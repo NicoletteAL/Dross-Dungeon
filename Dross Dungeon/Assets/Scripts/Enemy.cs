@@ -36,6 +36,7 @@ public class Enemy : MonoBehaviour
                     max = 25;
                     low = 1;
                     high = 4;
+                    sp.sprite = spArr[2];
                     break;
                 case 1:
                     enemyName = "Filth, Child Fatberg";
@@ -43,6 +44,7 @@ public class Enemy : MonoBehaviour
                     max = 35;
                     low = 3;
                     high = 5;
+                    sp.sprite = spArr[3];
                     break;
                 case 2:
                 enemyName = "Dross, Mother of All Fatbergs";
@@ -55,6 +57,10 @@ public class Enemy : MonoBehaviour
         }
         else {
             int num = Random.Range(0,2);
+            hp = 10;
+            max = 10;
+            low = 0;
+            high = 3;
             switch(num) {
             case 0:
                 sp.sprite = spArr[0];

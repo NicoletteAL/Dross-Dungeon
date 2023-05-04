@@ -54,4 +54,9 @@ public class GameManager : MonoBehaviour
             
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other) { // player bumps into the boss
+    Enemy.isMini = true;
+    SceneManager.LoadScene("Battle");
+    }
 }

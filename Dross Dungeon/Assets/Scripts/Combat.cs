@@ -42,6 +42,7 @@ public class Combat : MonoBehaviour
                 Player.low +=2;
                 Player.high += 2;
                 if (Enemy.isMini) {
+                    Player.max += 10;
                     GameManager.count++;
                 }
                 Win();
@@ -98,10 +99,14 @@ public class Combat : MonoBehaviour
     }
 
     void Win() {
+        // reset the enemy
+        e.hp = e.max;
         SceneManager.LoadScene("Overworld");
     }
 
     void Lose() {
+        // reset the player
+        Player.max = Player.hp = 20;
         SceneManager.LoadScene("Lose");
     }
 
