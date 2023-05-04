@@ -1490,7 +1490,7 @@ AudioSource:
   m_GameObject: {fileID: 1637897956}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3583652927911457307, guid: 9d38fccea1d81494a9e31168934d7f47, type: 2}
   m_audioClip: {fileID: 8300000, guid: ecbdb627e656bc741bc1a51919af8aac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1584,6 +1584,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5063398611532442865, guid: cca6bb80269cdc644abef2726090776b, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -3583652927911457307, guid: 9d38fccea1d81494a9e31168934d7f47, type: 2}
     - target: {fileID: 3921097718511412234, guid: cca6bb80269cdc644abef2726090776b, type: 3}
       propertyPath: m_Name
       value: Enemy

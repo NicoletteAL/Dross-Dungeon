@@ -15,10 +15,12 @@ public class Player : MonoBehaviour
     public static Player Instance { get { return _instance; } }
 
     public static Vector3 lasPos;
+    public static AudioSource src;
 
     // Start is called before the first frame update
     void Start()
     {
+        src = GetComponent<AudioSource>();
         transform.position = lasPos;
     }
 

@@ -16,10 +16,12 @@ public class GameManager : MonoBehaviour
 
     public AudioClip norm;
     public AudioClip finalBoss;
+    public static AudioSource src;
 
     // Start is called before the first frame update
     void Start()
     {
+        src = GetComponent<AudioSource>();
         GetComponent<AudioSource>().clip = norm;
         CheckSprite();
     }

@@ -42,7 +42,8 @@ public class Combat : MonoBehaviour
                     Player.max += 10;
                     GameManager.count++;
                 }
-                Win();
+                Invoke("Win", 2);
+                //Win();
             }
             else{
                 alert.text = "You did " + num + " damage";
@@ -50,8 +51,9 @@ public class Combat : MonoBehaviour
             num = Random.Range(e.low, e.high);
             Player.hp-=num;
             if (Player.hp<=0) {
+                Player.src.Play();
                 alert.text = "You lost...";
-                Lose();
+                Invoke("Lose", 2);
             }
             else {
                 alert.text += "\nThe enemy did " + num + " damage";
@@ -64,15 +66,16 @@ public class Combat : MonoBehaviour
             switch(num) {
                 case 1:
                     alert.text = "You managed to get away";
-                    Win();
+                    Invoke("Win", 2);
                     break;
                 default:
                     alert.text = "You failed to get away. The Rat has a free attack!";
                     num = Random.Range(e.low, e.high) + 1;
                     Player.hp-=num;
                     if (Player.hp<=0) {
+                        Player.src.Play();
                         alert.text = "You lost...";
-                        Lose();
+                        Invoke("Lose", 2);
                     }
                     else {
                         alert.text += "\nThe enemy did " + num + " damage";
@@ -89,7 +92,7 @@ public class Combat : MonoBehaviour
                 //alert.text = "You have no money? The Rat beats you up!";
                 Player.gold = 0;
             }
-            Win();
+            Invoke("Win", 2);
             textE.text = "HP: " + e.hp + "/" + e.max;
             textP.text = "HP: " + Player.hp + "/" + Player.max;
         }
@@ -114,8 +117,9 @@ public class Combat : MonoBehaviour
 
         // reset the bosses
         GameManager.count = 0;
-        GameManager g = GameManager.Instance;
-        g.GetComponent<AudioSource>().Stop();
+        GameManager.src.Stop();
+        //GameManager g = GameManager.Instance;
+        //g.GetComponent<AudioSource>().Stop();
 
         SceneManager.LoadScene("Lose");
     }
