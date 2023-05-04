@@ -42,7 +42,7 @@ public class Combat : MonoBehaviour
                     Player.max += 10;
                     GameManager.count++;
                 }
-                Invoke("Win", 2);
+                Invoke("Win", 1);
                 //Win();
             }
             else{
@@ -66,7 +66,7 @@ public class Combat : MonoBehaviour
             switch(num) {
                 case 1:
                     alert.text = "You managed to get away";
-                    Invoke("Win", 2);
+                    Invoke("Win", 1);
                     break;
                 default:
                     alert.text = "You failed to get away. The Rat has a free attack!";
@@ -92,7 +92,7 @@ public class Combat : MonoBehaviour
                 //alert.text = "You have no money? The Rat beats you up!";
                 Player.gold = 0;
             }
-            Invoke("Win", 2);
+            Invoke("Win", 1);
             textE.text = "HP: " + e.hp + "/" + e.max;
             textP.text = "HP: " + Player.hp + "/" + Player.max;
         }
