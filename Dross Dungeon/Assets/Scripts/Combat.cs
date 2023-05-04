@@ -28,10 +28,7 @@ public class Combat : MonoBehaviour
             num = Random.Range(Player.low, Player.high);
 
             // play hit sound
-            //play the sound
             GetComponent<AudioSource>().pitch = Random.Range(.7f,1.3f);
-
-            //play hit sound
             GetComponent<AudioSource>().Play();
 
             e.hp-=num;

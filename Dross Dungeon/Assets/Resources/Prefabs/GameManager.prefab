@@ -45,4 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 6079451549712780146, guid: cd2ba8adab327c04e9c4bf361f2db92e, type: 3}
-  spArr: []
+  spArr:
+  - {fileID: 21300000, guid: 5acc12dc1a51f3a49923c2f49ce382ee, type: 3}
+  - {fileID: 21300000, guid: c9210c891e81f8a44b8bcef312bd1f4e, type: 3}
+  - {fileID: 21300000, guid: cdbd74b6c8a58124dad644172f7303a2, type: 3}
+  norm: {fileID: 8300000, guid: e5cd63f875212a04d975f45f789f07dc, type: 3}
+  finalBoss: {fileID: 8300000, guid: 7eaa74cdd85c4b0489bbd94e001980b1, type: 3}

@@ -10,17 +10,17 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return _instance; } }
 
     public static int count = 0;
-    //public static int count = 0;
     public GameObject boss;
     public Sprite[] spArr;
     SpriteRenderer sp;
 
-    //Enemy e = Enemy.Instance;
-
+    public AudioClip norm;
+    public AudioClip finalBoss;
 
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<AudioSource>().clip = norm;
         CheckSprite();
     }
 
@@ -64,7 +64,10 @@ public class GameManager : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) { // player bumps into the boss
-    //e.setIsMini(false);
+    if (count == 2) {
+        GetComponent<AudioSource>().clip = finalBoss;
+        GetComponent<AudioSource>().Stop();
+    }
     Enemy.isMini = true;
     SceneManager.LoadScene("Battle");
     }
