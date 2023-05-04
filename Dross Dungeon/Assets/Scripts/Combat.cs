@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Combat : MonoBehaviour
 {
-    //public Player p;
     public Enemy e;
     int num;
     public TextMeshProUGUI alert;
@@ -32,7 +31,7 @@ public class Combat : MonoBehaviour
             //play the sound
             GetComponent<AudioSource>().pitch = Random.Range(.7f,1.3f);
 
-            //play our sound
+            //play hit sound
             GetComponent<AudioSource>().Play();
 
             e.hp-=num;
@@ -117,6 +116,8 @@ public class Combat : MonoBehaviour
 
         // reset the bosses
         GameManager.count = 0;
+        GameManager g = GameManager.Instance;
+        g.GetComponent<AudioSource>().Stop();
 
         SceneManager.LoadScene("Lose");
     }

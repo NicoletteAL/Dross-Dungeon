@@ -41,8 +41,13 @@ public class GameManager : MonoBehaviour
                 sp.sprite = spArr[1];
                 transform.position = new Vector3(-12.5f, 15.5f, -8.0f);
                 break;
+            case 2:
+                sp.sprite = spArr[2];
+                transform.position = new Vector3(20.5f, 1f, -8.0f);
+                break;
             default:
-            count = 0;
+                count = 0;
+                GetComponent<AudioSource>().Stop();
                 SceneManager.LoadScene("Win");
                 break;
         }
