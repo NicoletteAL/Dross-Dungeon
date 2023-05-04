@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
 
     public static Player Instance { get { return _instance; } }
 
-    public Vector3 lasPos;
+    public static Vector3 lasPos;
 
     // Start is called before the first frame update
     void Start()
